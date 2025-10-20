@@ -8,9 +8,9 @@ import {
     NavigationMenuLink,
     NavigationMenuList,
     NavigationMenuTrigger,
-} from "@/components/ui/navigation-menu"
+} from "@/components/ui/NavigationMenu"
 
-const categories: { title: string; href: string }[] = [
+const categories = [
     {
         title: "Tranh đắp vẽ",
         href: "/danh-muc/tranh-dap-ve",
@@ -56,23 +56,23 @@ const categories: { title: string; href: string }[] = [
 export default function NavigationMenuHeader() {
     return (
         <div className="bg-info">
-            <div className="max-w-7xl mx-auto">
-                <NavigationMenu>
+            <div className="max-w-screen-xl mx-auto">
+                <NavigationMenu >
                     <NavigationMenuList className="flex-wrap">
-                        <NavigationMenuItem className="py-2">
-                            <NavigationMenuLink asChild className={``}>
+                        <NavigationMenuItem>
+                            <NavigationMenuLink asChild>
                                 <Link href="/">TRANG CHỦ</Link>
                             </NavigationMenuLink>
                         </NavigationMenuItem>
                         <NavigationMenuItem>
-                            <NavigationMenuLink asChild className={''}>
+                            <NavigationMenuLink asChild>
                                 <Link href="/gioi-thieu">GIỚI THIỆU</Link>
                             </NavigationMenuLink>
                         </NavigationMenuItem>
-                        <NavigationMenuItem className="">
+                        <NavigationMenuItem>
                             <NavigationMenuTrigger>VẼ TRANH</NavigationMenuTrigger>
                             <NavigationMenuContent>
-                                <ul className="grid gap-2 sm:w-[400px] md:w-[500px] md:grid-cols-2 lg:w-[600px]">
+                                <ul className="grid gap-1 sm:w-[400px] md:w-[500px] md:grid-cols-2 lg:w-[600px]">
                                     {categories.map((category) => (
                                         <ListItem
                                             key={category.title}
@@ -83,18 +83,18 @@ export default function NavigationMenuHeader() {
                                 </ul>
                             </NavigationMenuContent>
                         </NavigationMenuItem>
-                        <NavigationMenuItem className="">
-                            <NavigationMenuLink asChild className={''}>
+                        <NavigationMenuItem>
+                            <NavigationMenuLink asChild>
                                 <Link href="/noi-that">NỘI THẤT</Link>
                             </NavigationMenuLink>
                         </NavigationMenuItem>
-                        <NavigationMenuItem className="">
-                            <NavigationMenuLink asChild className={''}>
+                        <NavigationMenuItem>
+                            <NavigationMenuLink asChild>
                                 <Link href="/bang-hieu-quang-cao">BẢNG HIỆU QUẢNG CÁO</Link>
                             </NavigationMenuLink>
                         </NavigationMenuItem>
-                        <NavigationMenuItem className="">
-                            <NavigationMenuLink asChild className={''}>
+                        <NavigationMenuItem>
+                            <NavigationMenuLink asChild>
                                 <Link href="/tieu-canh-san-vuon">TIỂU CẢNH SÂN VƯỜN</Link>
                             </NavigationMenuLink>
                         </NavigationMenuItem>
@@ -106,13 +106,11 @@ export default function NavigationMenuHeader() {
 }
 
 function ListItem({
-    title,
-    href,
-    ...props
+    title, href, ...props
 }: React.ComponentPropsWithoutRef<"li"> & { href: string }) {
     return (
         <li {...props}>
-            <NavigationMenuLink asChild className="text-black">
+            <NavigationMenuLink asChild className="text-black h-10">
                 <Link href={href}>
                     <div className="text-sm leading-none font-medium">{title}</div>
                 </Link>

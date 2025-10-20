@@ -10,11 +10,11 @@ import { Typography } from "@/components/ui/Typography";
 export default function Header() {
     return (
         <>
-            <div className="max-w-7xl mx-auto">
+            <div className="w-full max-w-screen-xl mx-auto">
                 <div className="flex items-center justify-between py-3">
                     <div className="flex items-center gap-2">
                         <Image
-                            src="/assets/mythuatkhanhhoa_icon.png"
+                            src="/assets/my-thuat-khanh-hoa-logo.png"
                             alt="Logo"
                             width={80} height={80}
                             className="rounded-lg object-cover dark:brightness-[0.2] dark:grayscale"
@@ -26,7 +26,7 @@ export default function Header() {
                             </Button>
                         </ButtonGroup>
                     </div>
-                    <div className="flex flex-col gap-1">
+                    <div className="hidden flex-col gap-1 md:flex">
                         <ButtonGroup>
                             <Button variant='outline' aria-label="Search">
                                 <Phone />
@@ -44,16 +44,16 @@ export default function Header() {
                             </ButtonGroupText>
                         </ButtonGroup>
                     </div>
-                    <div className="flex flex-col gap-1 items-center">
+                    <div className="hidden flex-col gap-1 md:flex">
                         <ButtonGroup>
                             <Button variant="outline" aria-label="Search">
                                 <House />
                             </Button>
                             <ButtonGroupText>
-                                <Label htmlFor="name" className="font-semibold">Nha Trang - Khánh Hoà</Label>
+                                Nha Trang - Khánh Hoà
                             </ButtonGroupText>
                         </ButtonGroup>
-                        <Typography className="text-muted">(Thời gian từ 8:00 - 20:00)</Typography>
+                        <Typography className="text-xs text-center">(Thời gian từ 8:00 - 20:00)</Typography>
                     </div>
                 </div>
             </div>
