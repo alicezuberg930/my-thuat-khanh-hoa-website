@@ -1,0 +1,20 @@
+{
+  "name": "Mỹ Thuật Khánh Hòa",
+  "short_name": "MTKH",
+  "display": "standalone",
+  "start_url": "/",
+  "theme_color": "#000000",
+  "background_color": "#ffffff",
+  "icons": [
+    {
+      "src": "/assets/my-thuat-khanh-hoa-logo.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/my-thuat-khanh-hoa-logo.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
