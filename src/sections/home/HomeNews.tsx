@@ -1,6 +1,5 @@
 import { AspectRatio } from "@/components/ui/AspectRatio";
 import { Badge } from "@/components/ui/Badge";
-import { CardContent } from "@/components/ui/Card";
 import { Separator } from "@/components/ui/Separator";
 import { Typography } from "@/components/ui/Typography";
 import Image from "next/image";
