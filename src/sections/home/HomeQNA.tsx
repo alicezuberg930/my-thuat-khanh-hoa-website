@@ -1,3 +1,4 @@
+import { MotionViewport, varBounce } from "@/components/animate";
 import {
     Accordion,
     AccordionContent,
@@ -10,9 +11,13 @@ import { Typography } from "@/components/ui/Typography";
 export default function HomeQNA() {
     return (
         <>
-            <Typography variant='h4' className="text-center mb-4">Câu hỏi thường gặp</Typography>
+            <MotionViewport variants={varBounce({ durationIn: 3 }).inLeft}>
+                <Typography variant='h4' className="text-center mb-4">Câu hỏi thường gặp</Typography>
+            </MotionViewport>
             <Separator className="w-28 mx-auto relative after-separator" />
-            <Typography className="my-4 text-center">Giải đáp những thắc mắc thường gặp khi sử dụng dịch vụ vẽ tranh tường tại Mỹ Thuật Khánh Hòa</Typography>
+            <MotionViewport variants={varBounce({ durationIn: 4 }).inLeft}>
+                <Typography className="my-4 text-center">Giải đáp những thắc mắc thường gặp khi sử dụng dịch vụ vẽ tranh tường tại Mỹ Thuật Khánh Hòa</Typography>
+            </MotionViewport>
             <Accordion
                 type="single"
                 collapsible

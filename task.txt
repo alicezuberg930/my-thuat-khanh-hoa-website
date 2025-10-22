@@ -1,0 +1,8 @@
+thêm, sửa, xóa, lấy danh sách tin tức
+thêm, sửa, xóa, lấy danh sách dự án đã thực hiện
+thêm, sửa, xóa, lấy danh sách danh mục
+thêm, lấy danh sách bình luận trong trang chi tiết dự án
+thêm, sửa, xóa, lấy danh sách banner
+đăng nhập, đăng ký
+bảo vệ route 
+tìm kiếm tất cả theo tên dự án, danh mục, tin tức

@@ -1,8 +1,11 @@
+import "./globals.css";
 import type { Metadata } from "next";
 import localFont from "next/font/local";
-import "./globals.css";
 import createMetadata from "@/lib/seo";
 import { Footer, Header } from "@/sections/home";
+import { MotionLazyContainer } from "@/components/animate";
+import { FAB } from "@/components/ui/Fab";
+import { PhoneCall } from "lucide-react";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -26,8 +29,13 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <Header />
-        {children}
+        <MotionLazyContainer>
+          {children}
+        </MotionLazyContainer>
         <Footer />
+        <FAB variant={'info'}>
+          <PhoneCall size={24} />
+        </FAB>
       </body>
     </html>
   );

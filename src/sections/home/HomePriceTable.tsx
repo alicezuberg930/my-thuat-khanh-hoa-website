@@ -8,6 +8,7 @@ import {
     TableHeader,
     TableRow,
 } from "@/components/ui/Table"
+import { MotionViewport, varBounce } from "@/components/animate";
 
 const services = [
     {
@@ -47,9 +48,13 @@ const services = [
 export default function HomePriceTable() {
     return (
         <>
-            <Typography variant='h4' className="text-center mb-4">Bảng giá tham khảo tại Mỹ thuật Khánh Hòa</Typography>
+            <MotionViewport variants={varBounce({ durationIn: 3 }).inLeft}>
+                <Typography variant='h4' className="text-center mb-4">Bảng giá tham khảo tại Mỹ thuật Khánh Hòa</Typography>
+            </MotionViewport>
             <Separator className="w-28 mx-auto relative after-separator" />
-            <Typography className="my-4 text-center">Công ty cam kết chất lượng, khách hàng hài lòng</Typography>
+            <MotionViewport variants={varBounce({ durationIn: 4 }).inLeft}>
+                <Typography className="my-4 text-center">Công ty cam kết chất lượng, khách hàng hài lòng</Typography>
+            </MotionViewport>
             <div className="rounded-xl border shadow my-8">
                 <Table>
                     <TableHeader>

@@ -1,4 +1,5 @@
 "use client"
+import { MotionViewport, varBounce } from "@/components/animate";
 import Carousel, { CarouselArrows, Settings } from "@/components/carousel";
 import { AspectRatio } from "@/components/ui/AspectRatio";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/Card";
@@ -66,7 +67,9 @@ export default function HomeTeam() {
 
     return (
         <>
-            <Typography variant='h4' className="text-center mb-4">Đội ngũ Mỹ Thuật Khánh Hòa</Typography>
+            <MotionViewport variants={varBounce({ durationIn: 3 }).inLeft}>
+                <Typography variant='h4' className="text-center mb-4">Đội ngũ Mỹ Thuật Khánh Hòa</Typography>
+            </MotionViewport>
             <Separator className="w-28 mx-auto relative after-separator" />
             <CarouselArrows filled shape="rounded" onNext={handleNext} onPrevious={handlePrev}>
                 <Carousel ref={carouselRef} {...carouselSettings}>

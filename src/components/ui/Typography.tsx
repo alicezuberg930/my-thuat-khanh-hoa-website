@@ -18,7 +18,7 @@ const typographyVariants = cva('mb-1 text-base leading-7 font-normal', {
             blockquote: 'my-2 border-l-2 pl-6 italic',
             code: 'relative w-fit rounded-md bg-muted px-[0.3rem] py-[0.2rem] font-mono text-sm font-medium',
             caption: 'block text-sm tracking-wide',
-            span: 'text-sm text-pretty lg:text-base'
+            span: 'text-xs text-pretty lg:text-base'
         },
     },
     defaultVariants: {
@@ -26,27 +26,24 @@ const typographyVariants = cva('mb-1 text-base leading-7 font-normal', {
     },
 })
 
-interface TypographyProps
-    extends React.ComponentProps<'p'>,
-    VariantProps<typeof typographyVariants> {
+interface TypographyProps extends React.ComponentProps<'p'>, VariantProps<typeof typographyVariants> {
     component?: React.ElementType
 }
 
-function Typography({
-    className,
-    variant = 'p',
-    component,
-    ...props
-}: TypographyProps) {
-    const Comp = component ?? (variant as React.ElementType)
+const Typography = React.forwardRef<HTMLParagraphElement | HTMLHeadingElement | HTMLSpanElement, TypographyProps>(
+    ({ className, variant = 'p', component, ...props }, ref) => {
+        const Comp = component ?? (variant as React.ElementType)
 
-    return (
-        <Comp
-            data-slot='typography'
-            className={cn(typographyVariants({ variant }), className)}
-            {...props}
-        />
-    )
-}
+        return (
+            <Comp
+                ref={ref}
+                data-slot='typography'
+                className={cn(typographyVariants({ variant }), className)}
+                {...props}
+            />
+        )
+    }
+)
+Typography.displayName = "TypographyButton"
 
-export { Typography, typographyVariants }
+export { Typography, typographyVariants, type TypographyProps }

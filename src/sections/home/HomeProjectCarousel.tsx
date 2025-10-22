@@ -1,4 +1,5 @@
 'use client'
+import { MotionViewport, varBounce } from "@/components/animate";
 import Carousel, { CarouselArrows, Settings } from "@/components/carousel";
 import { AspectRatio } from "@/components/ui/AspectRatio";
 import { Separator } from "@/components/ui/Separator";
@@ -64,9 +65,13 @@ export default function HomeProjectCarousel() {
 
     return (
         <>
-            <Typography variant='h4' className="text-center mb-4">Công trình đã thực hiện</Typography>
+            <MotionViewport variants={varBounce({ durationIn: 3 }).inLeft}>
+                <Typography variant='h4' className="text-center mb-4">Công trình đã thực hiện</Typography>
+            </MotionViewport>
             <Separator className="w-28 mx-auto relative after-separator" />
-            <Typography className="my-4 text-center">Danh sách công trình hoàn thiện bởi Mỹ Thuật Khánh Hòa</Typography>
+            <MotionViewport variants={varBounce({ durationIn: 4 }).inLeft}>
+                <Typography className="my-4 text-center">Danh sách công trình hoàn thiện bởi Mỹ Thuật Khánh Hòa</Typography>
+            </MotionViewport>
             <CarouselArrows filled shape="rounded" onNext={handleNext} onPrevious={handlePrev}>
                 <Carousel ref={carouselRef} {...carouselSettings}>
                     {projects.map(project => (

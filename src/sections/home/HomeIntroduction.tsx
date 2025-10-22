@@ -10,11 +10,14 @@ import {
 } from "@/components/ui/Card"
 import { Button } from "@/components/ui/Button";
 import Image from "next/image";
+import { MotionViewport, varBounce } from "@/components/animate";
 
 export default function HomeIntroduction() {
     return (
         <>
-            <Typography variant='h4' className="text-center mb-4">Giới thiệu về Mỹ Thuật Khánh Hòa</Typography>
+            <MotionViewport variants={varBounce({ durationIn: 3 }).inLeft}>
+                <Typography variant='h4' className="text-center mb-4">Giới thiệu về Mỹ Thuật Khánh Hòa</Typography>
+            </MotionViewport>
             <Separator className="w-28 mx-auto relative after-separator" />
             <div className="flex gap-3 flex-col md:flex-row my-8">
                 <Card className="flex-1">
