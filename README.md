@@ -1,3 +1,5 @@
+# My-Thuat-Khanh-Hoa 
+A modern landing page website in Next.js built on top of shadcn/ui and tailwindcss. Beautiful, accessible, and customizable components for your next project.
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
