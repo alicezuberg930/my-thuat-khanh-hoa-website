@@ -5,6 +5,8 @@ import { Footer, Header } from "@/sections/home";
 import { MotionLazyContainer } from "@/components/animate";
 import { FAB } from "@/components/ui/Fab";
 import { PhoneCall } from "lucide-react";
+import { SidebarInset, SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
+import AppSidebar from "@/sections/home/AppSidebar";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -27,14 +29,19 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-        <Header />
-        <MotionLazyContainer>
-          {children}
-        </MotionLazyContainer>
-        <Footer />
-        <FAB variant={'info'} className="bg-green-600 hover:bg-green-600/80">
-          <PhoneCall size={28} />
-        </FAB>
+        <SidebarProvider open={false}>
+          <AppSidebar />
+          <SidebarInset>
+            <Header />
+            <MotionLazyContainer>
+              {children}
+            </MotionLazyContainer>
+            <Footer />
+            <FAB variant={'info'} className="bg-green-600 hover:bg-green-600/80">
+              <PhoneCall size={28} />
+            </FAB>
+          </SidebarInset>
+        </SidebarProvider>
       </body>
     </html>
   );

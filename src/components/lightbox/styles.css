@@ -21,6 +21,7 @@
 
 /* Button styles */
 .yarl__button {
+  text-align: center;
   filter: unset;
 }
 

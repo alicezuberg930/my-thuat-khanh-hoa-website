@@ -19,7 +19,7 @@ export default function Lightbox({
   disabledZoom = false,
   disabledVideo = false,
   disabledTotal = false,
-  disabledCaptions = false,
+  disabledCaptions = false, 
   disabledSlideshow = false,
   disabledThumbnails = false,
   disabledFullscreen = false,

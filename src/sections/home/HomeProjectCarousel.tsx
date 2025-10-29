@@ -141,7 +141,7 @@ export default function HomeProjectCarousel() {
                 index={selectedImage}
                 open={selectedImage >= 0}
                 close={handleCloseBasic}
-                slides={[...projects]}
+                slides={projects}
             />
         </>
     )

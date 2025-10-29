@@ -6,6 +6,7 @@ import { ButtonGroup, ButtonGroupText } from "@/components/ui/ButtonGroup";
 import { Label } from "@/components/ui/Label";
 import NavigationMenuHeader from "./NavigationMenuHeader";
 import { Typography } from "@/components/ui/Typography";
+import { SidebarTrigger } from "@/components/ui/sidebar";
 
 export default function Header() {
     return (
@@ -13,10 +14,13 @@ export default function Header() {
             <div className="w-full max-w-screen-xl mx-auto">
                 <div className="flex items-center justify-between py-3">
                     <div className="flex items-center gap-2">
+                        <div className="block md:hidden">
+                            <SidebarTrigger />
+                        </div>
                         <Image
                             src="/assets/my-thuat-khanh-hoa-logo.png"
                             alt="Logo"
-                            width={80} height={80}
+                            width={72} height={72}
                             className="rounded-lg object-cover dark:brightness-[0.2] dark:grayscale"
                         />
                         <ButtonGroup>
@@ -57,7 +61,9 @@ export default function Header() {
                     </div>
                 </div>
             </div>
-            <NavigationMenuHeader />
+            <div className="hidden md:block">
+                <NavigationMenuHeader />
+            </div>
         </>
     )
 }
