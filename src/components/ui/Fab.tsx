@@ -16,7 +16,7 @@ const fabVariants = cva("rounded-full hover:shadow-xl transition-all flex items-
                 "bg-secondary text-secondary-foreground shadow-sm hover:bg-secondary/80",
             ghost: "hover:bg-accent hover:text-accent-foreground",
             link: "text-primary underline-offset-4 hover:underline",
-            info: "bg-info text-info-foreground shadow-sm hover:bg-info/80"
+            info: "bg-info text-info-foreground shadow-sm hover:bg-info/80",
         },
         position: {
             "bottom-right": "fixed bottom-2 right-2 md:bottom-6 md:right-6",

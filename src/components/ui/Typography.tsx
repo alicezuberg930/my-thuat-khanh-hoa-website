@@ -18,7 +18,7 @@ const typographyVariants = cva('mb-1 text-base leading-7 font-normal', {
             blockquote: 'my-2 border-l-2 pl-6 italic',
             code: 'relative w-fit rounded-md bg-muted px-[0.3rem] py-[0.2rem] font-mono text-sm font-medium',
             caption: 'block text-sm tracking-wide',
-            span: 'text-xs text-pretty lg:text-base'
+            span: 'block text-sm text-pretty lg:text-base'
         },
     },
     defaultVariants: {
@@ -38,7 +38,7 @@ const Typography = React.forwardRef<HTMLParagraphElement | HTMLHeadingElement | 
             <Comp
                 ref={ref}
                 data-slot='typography'
-                className={cn(typographyVariants({ variant }), className)}
+                className={cn(typographyVariants({ variant, className }))}
                 {...props}
             />
         )

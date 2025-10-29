@@ -1,12 +1,8 @@
-import type { NextRequest } from 'next/server'
 import { ImageResponse } from 'next/og'
 import createMetadata from "@/lib/seo"
 
-export function GET(request: NextRequest) {
-    const { searchParams } = request.nextUrl
+export function GET() {
     const seo = createMetadata()
-    const title = searchParams.get('title') ?? ''
-    const description = searchParams.get('description') ?? seo.description
 
     return new ImageResponse(
         (
@@ -17,8 +13,8 @@ export function GET(request: NextRequest) {
                 }}
             >
                 <p tw='text-4xl'>{seo.applicationName}</p>
-                <p tw='text-6xl'>{title}</p>
-                <p tw='text-2xl'>{description}</p>
+                <p tw='text-6xl'>{seo.title}</p>
+                <p tw='text-2xl'>{seo.description}</p>
             </div>
         ),
         { width: 1200, height: 630 }

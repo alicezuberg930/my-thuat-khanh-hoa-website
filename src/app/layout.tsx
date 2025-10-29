@@ -1,7 +1,6 @@
 import "./globals.css";
-import type { Metadata } from "next";
 import localFont from "next/font/local";
-import createMetadata from "@/lib/seo";
+import createMetadata, { NextMetadata } from "@/lib/seo"
 import { Footer, Header } from "@/sections/home";
 import { MotionLazyContainer } from "@/components/animate";
 import { FAB } from "@/components/ui/Fab";
@@ -18,7 +17,7 @@ const geistMono = localFont({
   weight: "100 900",
 });
 
-export const metadata: Metadata = createMetadata()
+export const metadata: NextMetadata = createMetadata()
 
 export default function RootLayout({
   children,
@@ -33,8 +32,8 @@ export default function RootLayout({
           {children}
         </MotionLazyContainer>
         <Footer />
-        <FAB variant={'info'}>
-          <PhoneCall size={24} />
+        <FAB variant={'info'} className="bg-green-600 hover:bg-green-600/80">
+          <PhoneCall size={28} />
         </FAB>
       </body>
     </html>
