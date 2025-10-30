@@ -22,7 +22,7 @@ export default function HomeBannerCarousel() {
         slidesToShow: 1,
         slidesToScroll: 1,
         ...CarouselDots({
-            className: '-mt-12'
+            className: '-mt-6 md:-mt-12'
         })
     }
 

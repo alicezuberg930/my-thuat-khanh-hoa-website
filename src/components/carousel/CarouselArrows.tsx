@@ -32,9 +32,9 @@ export default function CarouselArrows({
   const hasChildren = !!children
 
   const baseButtonClasses = cn(
-    'transition-all duration-150 text-inherit',
-    shape === 'rounded' ? 'rounded-[6px]' : 'rounded-full',
-    !filled ? 'opacity-50 hover:opacity-100' : 'text-white/80 bg-gray-900/50 hover:text-white hover:bg-gray-900'
+    'transition-all duration-150 text-inherit p-1 md:px-4 md:py-2',
+    shape === 'rounded' ? 'rounded-lg' : 'rounded-full',
+    !filled ? 'opacity-50 hover:opacity-100' : 'text-white bg-gray-900/50 hover:bg-gray-900'
   )
 
   const leftButtonClasses = cn(
@@ -53,7 +53,7 @@ export default function CarouselArrows({
     return (
       <div className={cn('relative', className)} {...other}>
         <Button
-          className={cn(leftButtonClasses, "left-12")}
+          className={cn(leftButtonClasses, "left-4 md:left-12")}
           onClick={onPrevious}
           type="button"
           {...leftButtonProps}
@@ -62,7 +62,7 @@ export default function CarouselArrows({
         </Button>
         {children}
         <Button
-          className={cn(rightButtonClasses, "right-12")}
+          className={cn(rightButtonClasses, "right-4 md:right-12")}
           onClick={onNext}
           type="button"
           {...rightButtonProps}

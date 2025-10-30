@@ -14,9 +14,7 @@ export default function Header() {
             <div className="w-full max-w-screen-xl mx-auto">
                 <div className="flex items-center justify-between py-3">
                     <div className="flex items-center gap-2">
-                        <div className="block md:hidden">
-                            <SidebarTrigger />
-                        </div>
+                        <SidebarTrigger className="block md:hidden" />
                         <Image
                             src="/assets/my-thuat-khanh-hoa-logo.png"
                             alt="Logo"

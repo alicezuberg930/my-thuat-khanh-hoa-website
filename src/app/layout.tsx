@@ -5,7 +5,7 @@ import { Footer, Header } from "@/sections/home";
 import { MotionLazyContainer } from "@/components/animate";
 import { FAB } from "@/components/ui/Fab";
 import { PhoneCall } from "lucide-react";
-import { SidebarInset, SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
+import { SidebarInset, SidebarProvider } from "@/components/ui/sidebar";
 import AppSidebar from "@/sections/home/AppSidebar";
 
 const geistSans = localFont({
