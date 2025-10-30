@@ -9,7 +9,10 @@ import { useLightboxState } from 'yet-another-react-lightbox/core'
 import { LightBoxProps } from './types'
 import { ChevronLeftIcon, ChevronRightIcon, ClosedCaptionIcon, FullscreenIcon, PauseCircleIcon, PlayCircleIcon, ZoomInIcon, ZoomOutIcon } from 'lucide-react'
 import { Typography } from '../ui/Typography'
-import 'yet-another-react-lightbox/styles.css'
+// lightbox styles
+import 'yet-another-react-lightbox/styles.css';
+import 'yet-another-react-lightbox/plugins/captions.css';
+import 'yet-another-react-lightbox/plugins/thumbnails.css';
 import './styles.css'
 
 const ICON_SIZE = 24
@@ -19,7 +22,7 @@ export default function Lightbox({
   disabledZoom = false,
   disabledVideo = false,
   disabledTotal = false,
-  disabledCaptions = false, 
+  disabledCaptions = false,
   disabledSlideshow = false,
   disabledThumbnails = false,
   disabledFullscreen = false,
