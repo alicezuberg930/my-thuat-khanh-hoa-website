@@ -94,7 +94,7 @@ const items = [
 export default function AppSidebar() {
     return (
         <>
-            <Sidebar variant='inset' >
+            <Sidebar variant='inset'>
                 <SidebarContent>
                     <SidebarGroup>
                         {/* <SidebarGroupLabel>Application</SidebarGroupLabel> */}
